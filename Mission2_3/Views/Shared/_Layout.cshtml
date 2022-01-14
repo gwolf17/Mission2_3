@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+
+        <!--Dynamic title-->
+        <title>@ViewData["Title"]</title>
+
+        <!--Link to bootstrap, css, and favicon-->
+        <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/css/StyleSheet.css" rel="stylesheet" />
+        <link rel="~/shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    </head>
+
+    <body>
+        <!--Nav Bar-->
+        <nav>
+            <a asp-controller="Main" asp-action="Index">Home</a>
+            <a asp-controller="Main" asp-action="GradeCalculator">Grade Calculator</a>
+        </nav>
+
+        <div>
+            @RenderBody()
+        </div>
+
+        <!--Link to js portion of bootstrap, jquery, and calculate grade page-->
+        <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="~/lib/jquery/jquery-3.6.0.min.js"></script>
+        <!--Link to javascript page to complete calculations-->
+        <script src="~/js/Calculate.js"></script>
+    </body>
+</html>
